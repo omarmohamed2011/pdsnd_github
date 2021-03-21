@@ -24,6 +24,7 @@ def get_choice(command,choices=('yes','no')):
         elif ',' not in action:
             if action in choices:
                 break
+        # Filter out commmas from action:
         elif ',' in action:
             act = [i.strip().lower() for i in action.split(',')]
             if list(filter(lambda x: x in choices, act)) == act:
@@ -52,6 +53,7 @@ def get_filters():
         month = get_choice( "\nChoose from January to June, for what month(s) do you want do filter data? Use 'all' for all months.\n>" ,months)
     
         # TO DO: get user input for day of week (all, monday, tuesday, ... sunday)
+        # The choice should be recieved as a number too:
         day = get_choice("\nNow choose for what weekday(s) do you want do filter bikeshare data? choose 'all' "
                          "for all days.\n>",weekdays)
     
