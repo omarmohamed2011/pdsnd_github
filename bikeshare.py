@@ -24,6 +24,7 @@ def get_choice(command,choices=('yes','no')):
         elif ',' not in action:
             if action in choices:
                 break
+        # Filter out commmas from action:
         elif ',' in action:
             act = [i.strip().lower() for i in action.split(',')]
             if list(filter(lambda x: x in choices, act)) == act:
