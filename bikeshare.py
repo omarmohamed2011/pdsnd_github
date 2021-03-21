@@ -224,7 +224,7 @@ def show_data(df):
     choice = get_choice( "\nWould you like to show five rows of the targeted database.\n>"
                             ": \n\n [yes] Yes\n [no] No\n\n>")
     while True:
-        if choice == 'yes':
+        if choice == 'yes' or choice =='YEs':
             print(df.head(i))
             i += 5
         else: 
